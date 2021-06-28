@@ -1,4 +1,7 @@
 import React, { useContext } from 'react';
+import {Link} from 'react-router-dom';
+
+import AddList from '../components/AddList'
 
 function Lista({context}) {
   const {lista} = useContext(context);
@@ -6,8 +9,13 @@ function Lista({context}) {
     <div>
       Tarefas
       <ul>
-        {lista.map((cur, index) => <li key={index}>{cur}</li>)}
+        {lista.map((cur, index) => (
+          <li key={index} > {cur.tarefa}  <Link to={ {
+            pathname: '/details', 
+            id: cur.id} }>Detalhes</Link> </li>
+        ))}
       </ul>
+      <AddList />
     </div>
   )
 }
