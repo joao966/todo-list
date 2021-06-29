@@ -9,8 +9,8 @@ function Details(props) {
   const [redirect, setredirect] = useState(false);
 
   const detailsFunc  = () => {
-    const find = lista.find((cur) => cur.id === id);
-    setDetailLista(find);
+    const detail = lista.find((cur) => cur.id === id);
+    setDetailLista(detail);
   }
 
   const handleRemove = () => {

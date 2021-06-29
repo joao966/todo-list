@@ -4,12 +4,13 @@ import Provider from './context/Provider';
 import context from './context/context';
 
 import Lista from './components/Lista'
-// import AddList from './components/AddList'
 import Details from './Pages/Details';
+
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App App-header">
       <h1>Todo List</h1>
         <Provider>
       <Switch>
